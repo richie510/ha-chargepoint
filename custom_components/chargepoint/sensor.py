@@ -187,8 +187,6 @@ CHARGER_SENSORS = [
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
         value=lambda entity: round(entity.session.energy_kwh, 2),
-        #if entity.session
-        #else 0,
         native_unit_of_measurement="kWh",
     ),
     ChargePointSensorEntityDescription(

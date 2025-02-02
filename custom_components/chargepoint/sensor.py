@@ -186,7 +186,7 @@ CHARGER_SENSORS = [
         icon="mdi:lightning-bolt-circle",
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
-        value=lambda entity: round(entity.session.energy_kwh, 2),
+        value=lambda entity: round(entity.session.energy_kwh, 2) if entity.session else,
         native_unit_of_measurement="kWh",
     ),
     ChargePointSensorEntityDescription(

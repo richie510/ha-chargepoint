@@ -186,7 +186,7 @@ CHARGER_SENSORS = [
         icon="mdi:lightning-bolt-circle",
         device_class=SensorDeviceClass.ENERGY,
         state_class=SensorStateClass.TOTAL_INCREASING,
-        value=lambda entity: round(entity.session.energy_kwh, 2)
+        value=lambda entity: round(entity.session.energy_kwh, 2),
         #commenting out resetting to zero to see if it fixes issue 55
         #if entity.session
         #else 0,
